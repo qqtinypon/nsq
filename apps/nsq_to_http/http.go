@@ -27,7 +27,7 @@ func HTTPGet(endpoint string) (*http.Response, error) {
 }
 
 func HTTPPost(endpoint string, body *bytes.Buffer) (*http.Response, error) {
-	req, err := http.NewRequest("POST", endpoint, body)
+	req, err := http.NewRequest("PUT", endpoint, body)
 	if err != nil {
 		return nil, err
 	}
